@@ -3,15 +3,18 @@ h1 {
   text-align: center;
   font-size: 150px;
 }
-img .container{
-    margin-left: auto;
-    margin-right: auto;
+.container img {
+  display: block;
+  width: 900px;
+  height: 600px;
+}
+.container {
+  width: 900px;
+  margin: auto;
 }
 .container div {
   display: inline-block;
   display: none;
-  position: absolute;
-
 }
 .roo {
   display: inline-block;
