@@ -1,0 +1,10 @@
+<h1>SO MANY BANDS</h1>
+
+<div class="search">
+  <h2>Search</h2>
+  <input type="text">
+</div>
+
+<% @bands.each do |band| %>
+  <h3><%= band.name %></h3>
+<% end %>

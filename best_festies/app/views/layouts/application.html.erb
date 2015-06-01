@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<div class="nav">
+  <ul>
+    <li><%= link_to "Search/Browse by Bands", bands_path %></li>
+    <li><%= link_to "Search/Browse by Festival", festivals_path %></li>
+    <li><%= link_to "Search/Browse by Location", regions_path %></li>
+    <li><%= link_to "Home", root_path %></li>
+  </ul>
+</div>
+
 <%= yield %>
 
 </body>
