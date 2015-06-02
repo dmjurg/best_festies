@@ -5,14 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Delius+Unicase:400,700|Londrina+Shadow' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <div class="nav">
   <ul>
-    <li><%= link_to "Search/Browse by Bands", bands_path %></li>
-    <li><%= link_to "Search/Browse by Festival", festivals_path %></li>
-    <li><%= link_to "Search/Browse by Location", regions_path %></li>
+    <li><%= link_to "Bands", bands_path %></li>
+    <li><%= link_to "Festivals", festivals_path %></li>
+    <li><%= link_to "Locations", regions_path %></li>
     <li><%= link_to "Home", root_path %></li>
   </ul>
 </div>

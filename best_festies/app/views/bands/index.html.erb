@@ -1,10 +1,15 @@
-<h1>SO MANY BANDS</h1>
+<%= javascript_include_tag 'bands', 'data-turbolinks-track' => true %>
 
-<div class="search">
-  <h2>Search</h2>
-  <input type="text">
+<header id="page header">
+  <h1>Bands</h1>
+<header>
+
+<div class="instructions">
+  <p>Click on a band or use the search box to get more information.</p>
 </div>
 
-<% @bands.each do |band| %>
-  <h3><%= band.name %></h3>
-<% end %>
+<div class="search">
+  <input type="text">
+<div>
+
+<div id="library"></div>

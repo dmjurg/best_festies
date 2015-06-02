@@ -1,59 +1,94 @@
+require 'httparty'
+
 Band.destroy_all;
 Festival.destroy_all;
 Genre.destroy_all;
 Region.destroy_all;
 
-bands = Band.create([
-  {
-    name: 'Sturgill Simpson',
-    image: 'http://assets.rollingstone.com/assets/images/story/is-sturgill-simpson-country-musics-savior-not-if-he-can-help-it-20140603/20140602-sturgillsimpson-x624-1401654140.jpg'
-  },
-  {
-    name: 'ODESZA',
-    image: 'http://www.audiofemme.com/wp-content/uploads/2014/09/Odesza-Bronson-Selling.jpg'
-  },
-  {
-    name: 'Glass Animals',
-    image: 'http://media.salon.com/2015/02/4839fbcc-ec2d-a6b1-4064-59087b5df601.jpg'
-  },
-  {
-    name: 'Run the Jewels',
-    image: 'http://www.monsterfresh.com/wp-content/uploads/2014/03/run-the-jewels-video-chains-1024x552.jpg'
+bands = [
+  "Sturgill Simpson",
+  "Billy Joel",
+  "Mumford and Sons",
+  "Deadmau5",
+  "Kendrick Lamar",
+  "Robert Plant and the Sensational Space Shifters",
+  "My Morning Jacket",
+  "Bassnectar",
+  "Childish Gambino",
+  "Flume",
+  "Ben Harper and the Innocent Criminals",
+  "Spoon",
+  "The War on Drugs",
+  "STS9",
+  "Ben Folds",
+  "ODESZA",
+  "Interpol",
+  "Glass Animals",
+  "Steely Dan",
+  "Alesso",
+  "Run the Jewels",
+  "Tame Impala",
+  "Alabama Shakes",
+  "Ride",
+  "Nero",
+  "Shakey Graves",
+  "Strand of Oaks",
+  "Sylvan Esso",
+  "Tove Lo",
+  "Hozier",
+  "Vance Joy",
+  "Gary Clark Jr.",
+  "The Weeknd",
+  "Alt-J",
+  "Axwell^Ingrosso",
+  "Belle and Sebastian",
+  "Jack White",
+  "Ratatat",
+  "AC/DC",
+  "Florence and the Machine",
+  "Drake",
+  "Kaskade",
+  "Ryan Adams",
+  "David Guetta",
+  "St. Vincent",
+  "Paul McCartney",
+  "Metallica",
+  "Sam Smith",
+  "Of Monsters and Men",
+  "A$AP Rocky",
+  "Kid Cudi",
+  "Brand New",
+  "TV on the Radio",
+  "Dillon Francis",
+  "Kygo",
+  "Carnage",
+  "Twenty One Pilots",
+  "Avicii",
+  "Skrillex",
+  "Steve Aoki",
+  "Tiesto",
+  "RAC",
+  "Porter Robinson",
+  "The Black Keys",
+  "Lana Del Rey",
+  "Bjork",
+  "Chromeo",
+  "Noel Gallagher's High Flying Birds",
+  "The Decemberists",
+  "Hot Chip",
+  "Little Dragon",
+  "Sbtrkt",
+  "Conor Oberst"
+]
 
-  },
-  {
-    name: 'Tame Impala',
-    image: 'http://music.mxdwn.com/wp-content/uploads/2015/04/TameImpala.jpg'
-  },
-  {
-    name: 'Shakey Graves',
-    image: 'http://i.ytimg.com/vi/RNsGJiVvmF0/maxresdefault.jpg'
-  },
-  {
-    name: 'Strand of Oaks',
-    image: 'http://www.premierguitar.com/ext/resources/images/content/Music-Blog/Strand-of-Oaks-feat.jpg?1404849053'
-  },
-  {
-    name: 'Sylvan Esso',
-    image: 'http://www.gwarlingo.com/wp-content/uploads/2014/07/Sylvan-Esso1.jpg'
-  },
-  {
-    name: 'Tove Lo',
-    image: 'http://cdn.shure.com/artist/hero_image/355/Tove-Lo.jpg'
-  },
-  {
-    name: 'Hozier',
-    image: 'http://image3.redbull.com/rbcom/010/2014-07-30/1331667861521_3/0012/0/1245/0/3339/3149/1500/3/meet-ireland-s-hozier.jpg'
-  },
-  {
-    name: 'Vance Joy',
-    image: 'http://lolp2.c3cdn.com/wp/wp-content/uploads/2014/03/Vance_Joy_-_101-copy.jpg'
-  },
-  {
-    name: 'Gary Clark Jr.',
-    image: 'http://tonereport.com/uploads/img/gary-clarke.jpg'
-  }
-]);
+bands.sort_by{|string| string.downcase}.each do |band|
+  results = Band.create({
+    name: "#{band}"
+  })
+  results.each do |result|
+    puts result["name"]
+  end
+end
 
 festivals = Festival.create([
   {
@@ -85,12 +120,6 @@ festivals = Festival.create([
     start_date: Date.parse('2015-06-05'),
     end_date: Date.parse('2015-06-07'),
     location: 'New York, NY'
-  },
-  {
-    name: 'Firefly',
-    start_date: Date.parse('2015-06-18'),
-    end_date: Date.parse('2015-06-21'),
-    location: 'Dover, DE'
   }
 ]);
 
