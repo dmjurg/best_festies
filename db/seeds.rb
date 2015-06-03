@@ -1,4 +1,4 @@
-require 'httparty'
+require 'httparty';
 
 Band.destroy_all;
 Festival.destroy_all;
@@ -19,7 +19,6 @@ bands = [
   "Ben Harper and the Innocent Criminals",
   "Spoon",
   "The War on Drugs",
-  "STS9",
   "Ben Folds",
   "ODESZA",
   "Interpol",
@@ -82,83 +81,19 @@ bands = [
 ]
 
 bands.sort_by{|string| string.downcase}.each do |band|
-  results = Band.create({
-    name: "#{band}"
+  Band.create({
+    name: band
   })
-  results.each do |result|
-    puts result["name"]
-  end
 end
 
-festivals = Festival.create([
-  {
-    name: 'Coachella',
-    start_date: Date.parse('2015-04-10'),
-    end_date: Date.parse('2015-04-12'),
-    location: 'Indio, CA'
-  },
-  {
-    name: 'Bonnaroo',
-    start_date: Date.parse('2015-06-11'),
-    end_date: Date.parse('2015-06-14'),
-    location: 'Manchester, TN'
-  },
-  {
-    name: 'Lollapalooza',
-    start_date: Date.parse('2015-07-31'),
-    end_date: Date.parse('2015-08-02'),
-    location: 'Chicago, IL'
-  },
-  {
-    name: 'Ultra',
-    start_date: Date.parse('2015-03-27'),
-    end_date: Date.parse('2015-03-29'),
-    location: 'Miami, FL'
-  },
-  {
-    name: 'Governors Ball',
-    start_date: Date.parse('2015-06-05'),
-    end_date: Date.parse('2015-06-07'),
-    location: 'New York, NY'
-  }
-]);
+festivals = [
+  {name: 'Coachella', start_date: Date.parse('2015-04-10'), end_date: Date.parse('2015-04-12'), location: 'Indio, CA'},
+  {name: 'Bonnaroo', start_date: Date.parse('2015-06-11'), end_date: Date.parse('2015-06-14'), location: 'Manchester, TN'},
+  {name: 'Lollapalooza', start_date: Date.parse('2015-07-31'), end_date: Date.parse('2015-08-02'), location: 'Chicago, IL'},
+  {name: 'Ultra', start_date: Date.parse('2015-03-27'), end_date: Date.parse('2015-03-29'), location: 'Miami, FL'},
+  {name: 'Governors Ball', start_date: Date.parse('2015-06-05'), end_date: Date.parse('2015-06-07'), location: 'New York, NY'}
+]
 
-genres = Genre.create([
-  {
-    name: 'Country'
-  },
-  {
-    name: 'EDM'
-  },
-  {
-    name: 'Indie'
-  },
-  {
-    name: 'Rock'
-  },
-  {
-    name: 'Hip Hop'
-  },
-  {
-    name: 'Pop'
-  }
-]);
-
-regions = Region.create([
-  {
-    name: 'Northeast'
-  },
-  {
-    name: 'Southeast'
-  },
-  {
-    name: 'West'
-  },
-  {
-    name: 'South'
-  },
-  {
-    name: 'Middle America'
-  }
-
-])
+festivals.each do |festival|
+  Festival.create(festival)
+end

@@ -1,5 +1,25 @@
-<h1>Where are you looking?</h1>
+<%= javascript_include_tag 'regions', 'data-turbolinks-track' => true %>
 
-<% @regions.each do |region| %>
-  <h2><%= region.name %></h2>
-<% end %>
+<header id="page header">
+  <h1>Locations</h1>
+<header>
+
+<div class="instructions">
+  <p>Check out the below map to find festivals in your area!</p>
+</div>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<div id="map" style="width: 500px; height: 350px;"></div>
+
+<script type="text/javascript">
+   var myOptions = { mapTypeId: google.maps.MapTypeId.ROADMAP };
+   var map = new google.maps.Map(document.getElementById("map"), myOptions);
+   var geocoder = new google.maps.Geocoder();
+
+   geocoder.geocode({'address': 'US'}, function (results, status) {
+      var ne = results[0].geometry.viewport.getNorthEast();
+      var sw = results[0].geometry.viewport.getSouthWest();
+
+      map.fitBounds(results[0].geometry.viewport);
+   });
+</script>

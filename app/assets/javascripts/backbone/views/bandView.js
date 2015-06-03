@@ -8,7 +8,7 @@ var BandView = Backbone.View.extend({
   },
 
   events: {
-    'click': 'inspectBand'
+    'click': 'detailBand'
   },
 
   render: function() {
@@ -16,7 +16,7 @@ var BandView = Backbone.View.extend({
     this.$el.html(renderedHTML);
   },
 
-  inspectBand: function() {
+  detailBand: function() {
     inspect.setBand(this.model);
   }
 });

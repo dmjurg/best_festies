@@ -1,5 +1,5 @@
 $(function() {
-  inspect = new InspectView();
+  bandDetail = new BandDetailView();
   bands = new BandsCollection();
   bandsView = new BandListView({
     collection: bands

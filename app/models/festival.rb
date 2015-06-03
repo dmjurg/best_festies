@@ -1,5 +1,7 @@
 class Festival < ActiveRecord::Base
   has_many :bands_festivals
   has_many :bands, :through => :bands_festivals
-  belongs_to :region
+
+  # geocoded_by :location
+  # after_validation :geocode, if: ->(obj){ obj.location.present? and obj.location_changed? }
 end

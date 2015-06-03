@@ -1,8 +1,8 @@
-var InspectView = Backbone.View.extend({
-  el: '#inspect',
+var BandDetailView = Backbone.View.extend({
+  el: '#bandDetail',
 
   initialize: function() {
-    console.log("band inspected")
+    console.log("band detail")
   },
 
   setBand: function(band) {

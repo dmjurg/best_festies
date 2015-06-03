@@ -1,10 +1,15 @@
-<h1>US Festivals</h1>
+<%= javascript_include_tag 'festivals', 'data-turbolinks-track' => true %>
+
+<header id="page header">
+  <h1>Festivals</h1>
+<header>
+
+<div class="instructions">
+  <p>Click on a festival or search for a festival to get more information:</p>
+</div>
 
 <div class="search">
-  <h2>Search</h2>
   <input type="text">
 </div>
 
-<% @festivals.each do |fest| %>
-  <h2><%= fest.name %></h2>
-<% end %>
+<div id="library"></div>

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'geocoder'
 gem 'backbone-on-rails'
 gem 'handlebars_assets'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
