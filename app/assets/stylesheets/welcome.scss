@@ -5,7 +5,8 @@ $skyblue: rgba(226, 255, 255, 1);
 $indigo: rgba(46, 46, 184, .7);
 $white: rgba(255, 255, 250, 1);
 $yellow: rgba(255, 214, 51, 1);
-$red: rgba(255, 51, 0, .7);
+$red: rgba(255, 51, 0, 1);
+$redSheer: rgba(255, 51, 0, .7);
 
 body {
   background-color: $skyblue;
@@ -19,6 +20,10 @@ h1 {
 }
 .instructions {
   font-family: $smallfont;
+  text-align: center;
+}
+.search {
+  text-align: center;
 }
 .logo h1 {
   font-size: 150px;
@@ -36,7 +41,7 @@ h1 {
 }
 .container div {
   display: inline-block;
-  display: none;
+  // display: none;
 }
 .roo {
   display: inline-block;
@@ -75,7 +80,7 @@ h1 {
   font-family: $secondfont;
   width: 25%;
   margin: 10px;
-  background: $red;
+  background: $redSheer;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -86,5 +91,30 @@ h1 {
   }
   p:hover {
     color: $indigo;
+  }
+}
+.festival-info, .band-info {
+  font-size: 18px;
+  text-align: center;
+  background-color: $yellow;
+  width: 60%;
+  margin: 10px auto;
+  border-radius: 10px;
+  font-family: $smallfont;
+  p {
+    margin: 0;
+  }
+}
+.add-band, .add-festival {
+  text-align: center;
+  button {
+    margin: 15px 10px 0 10px;
+    font-family: $smallfont;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    background-color: $indigo;
+    color: $white;
+    border-radius: 5px;
   }
 }

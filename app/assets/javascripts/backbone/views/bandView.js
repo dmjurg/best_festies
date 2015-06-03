@@ -17,6 +17,6 @@ var BandView = Backbone.View.extend({
   },
 
   detailBand: function() {
-    inspect.setBand(this.model);
+    bandDetail.setBand(this.model);
   }
 });

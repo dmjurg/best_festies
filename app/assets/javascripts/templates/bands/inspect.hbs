@@ -2,10 +2,11 @@
   <p>
     {{name}}
   </p>
-  <p>
-    {{genre}}
-  </p>
-  <p>
-    {{festivals}}
-  </p>
+  <ul>
+    {{#each festivals}}
+    <li>
+      {{ this.name }}
+    </li>  
+    {{/each}}
+  </ul>
 </div>
