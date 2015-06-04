@@ -20,7 +20,7 @@ function initRegions() {
     ['Governors Ball', 40.7127837, -74.0059413]
   ];
 
-  var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
+  var iconURLPrefix = 'https://maps.google.com/mapfiles/ms/icons/';
 
   var icons = [
     iconURLPrefix + 'red-dot.png',
