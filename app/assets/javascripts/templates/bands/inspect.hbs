@@ -3,10 +3,13 @@
     {{name}}
   </p>
   <ul>
+    Appearing at:
     {{#each festivals}}
     <li>
       {{ this.name }}
     </li>
+    {{else}}
+    <li class="empty">Nowhere yet!</li>
     {{/each}}
   </ul>
 </div>

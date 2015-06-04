@@ -9,8 +9,11 @@
     {{location}}
   </p>
   <ul>
+    Who'll be there?
     {{#each bands}}
       <li>{{ this.name }}</li>
+    {{else}}
+      <li class="empty">We don't have that info :-/</li>
     {{/each}}
   </ul>
 </div>

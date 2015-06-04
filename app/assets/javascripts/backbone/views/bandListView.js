@@ -7,12 +7,21 @@ var BandListView = Backbone.View.extend({
   },
 
   renderAll: function() {
-    this.$el.empty();
+    this.$("#band-list").empty();
     this.collection.each(this.renderOne, this);
   },
 
   renderOne: function(band) {
     var bandView = new BandView({model: band});
-    this.$el.append(bandView.$el);
+    this.$("#band-list").append(bandView.$el);
+  },
+
+  events: {
+    'keypress .search': 'filterBands'
+  },
+
+  filterBands: function() {
+    console.log("filtering bands")
   }
+
 });

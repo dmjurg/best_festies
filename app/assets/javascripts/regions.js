@@ -1,3 +1,5 @@
+$(document).ready(initRegions);
+
 function initRegions() {
   var myOptions = { mapTypeId: google.maps.MapTypeId.ROADMAP };
   var map = new google.maps.Map(document.getElementById("map"), myOptions);

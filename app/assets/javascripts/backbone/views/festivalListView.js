@@ -7,12 +7,21 @@ var FestivalListView = Backbone.View.extend({
   },
 
   renderAll: function() {
-    this.$el.empty();
+    this.$("#festival-list").empty();
     this.collection.each(this.renderOne, this);
   },
 
   renderOne: function(festival) {
     var festivalView = new FestivalView({model: festival});
-    this.$el.append(festivalView.$el);
+    this.$("#festival-list").append(festivalView.$el);
+  },
+
+  events: {
+    'keypress .search': 'filterFestivals'
+  },
+
+  filterFestivals: function() {
+    console.log("filtering festivals")
   }
+
 });

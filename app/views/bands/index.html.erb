@@ -1,21 +1,26 @@
-<%= javascript_include_tag 'bands', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'bands' %>
 
 <header id="page header">
   <h1>Bands</h1>
 </header>
 
-<div class="instructions">
-  <p>Click on a band or search for a band to get more information:</p>
+<div id="library">
+
+  <div class="instructions">
+    <p>Click on a band or search for a band to get more information:</p>
+  </div>
+
+  <form class="search">
+    <input type="text" placeholder="Find a band!">
+  </form>
+
+  <div class="add-band">
+    <p>Not seeing the band you're interested in?</p>
+    <button id="new-band">Add a Band</button>
+  </div>
+
+  <div id="bandDetail"></div>
+
+  <div id="band-list"></div>
+
 </div>
-
-<div class="search">
-  <input type="text">
-</div>
-
-<div class="add-band">
-  <button id="new-band">Add a Band</button>
-</div>
-
-<div id="bandDetail"></div>
-
-<div id="library"></div>

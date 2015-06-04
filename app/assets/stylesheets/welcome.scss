@@ -2,7 +2,7 @@ $headerfont: 'Londrina Shadow', cursive;
 $secondfont: 'Delius Unicase', cursive;
 $smallfont: 'Actor', sans-serif;
 $skyblue: rgba(226, 255, 255, 1);
-$indigo: rgba(46, 46, 184, .85);
+$indigo: rgba(46, 46, 184, .80);
 $white: rgba(255, 255, 250, 1);
 $yellow: rgba(255, 214, 51, 1);
 $red: rgba(255, 51, 0, 1);
@@ -117,14 +117,23 @@ h1 {
 }
 .add-band, .add-festival {
   text-align: center;
+  font-family: $smallfont;
   button {
-    margin: 15px 10px 0 10px;
-    font-family: $smallfont;
+    margin: 0;
     font-size: 16px;
+    font-family: $smallfont;
     padding: 10px;
     border: none;
     background-color: $indigo;
     color: $white;
     border-radius: 5px;
+  &:hover {
+    background-color: $yellow;
   }
+  }
+}
+#map {
+  width: 1000px;
+  height: 700px;
+  margin: auto;
 }

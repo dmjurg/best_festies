@@ -1,21 +1,26 @@
-<%= javascript_include_tag 'festivals', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'festivals' %>
 
 <header id="page header">
   <h1>Festivals</h1>
 </header>
 
-<div class="instructions">
-  <p>Click on a festival or search for a festival to get more information:</p>
+<div id="library">
+
+  <div class="instructions">
+    <p>Click on a festival or search for a festival to get more information:</p>
+  </div>
+
+  <form class="search">
+    <input type="text" placeholder="Find a festival!">
+  </form>
+
+  <div class="add-festival">
+    <p>Want to add a festival?</p>
+    <button id="new-festival">Add a Festival</button>
+  </div>
+
+  <div id="festivalDetail"></div>
+
+  <div id="festival-list"></div>
+
 </div>
-
-<div class="search">
-  <input type="text">
-</div>
-
-<div class="add-festival">
-  <button id="new-festival">Add a Festival</button>
-</div>
-
-<div id="festivalDetail"></div>
-
-<div id="library"></div>
