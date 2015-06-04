@@ -1,16 +1,21 @@
 <%= form_for @band do |f| %>
 
-  <div>
+  <div class="band-form">
     <%= f.label       :name %>
     <%= f.text_field  :name %>
   </div>
 
-  <div>
+  <div class="band-form">
     <%= f.label       :image %>
     <%= f.text_field  :image %>
   </div>
 
-  <div>
+  <!-- <div class="band-form">
+    <%= f.label       :festivals %>
+    <%= f.text_field  :festivals %>
+  </div> -->
+
+  <div class="band-form-button">
     <%= f.submit %>
   </div>
 

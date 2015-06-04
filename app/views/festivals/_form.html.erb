@@ -1,0 +1,32 @@
+<%= form_for @festival do |f| %>
+
+  <div class="festival-form">
+    <%= f.label       :name %>
+    <%= f.text_field  :name %>
+  </div>
+
+  <div class="festival-form">
+    <%= f.label       :start_date %>
+    <%= f.text_field  :start_date %>
+  </div>
+
+  <div class="festival-form">
+    <%= f.label       :end_date %>
+    <%= f.text_field  :end_date %>
+  </div>
+
+  <div class="festival-form">
+    <%= f.label       :location %>
+    <%= f.text_field  :location %>
+  </div>
+
+  <!-- <div class="festival-form">
+    <%= f.label       :bands %>
+    <%= f.text_field  :bands %>
+  </div> -->
+
+  <div class="festival-form-button">
+    <%= f.submit %>
+  </div>
+
+<% end %>

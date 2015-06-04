@@ -7,9 +7,11 @@ $white: rgba(255, 255, 250, 1);
 $yellow: rgba(255, 214, 51, 1);
 $red: rgba(255, 51, 0, 1);
 $redSheer: rgba(255, 51, 0, .85);
+$black: rgba(26, 26, 26, 1);
 
 body {
   background-color: $skyblue;
+  color: $black;
 }
 h1 {
   margin: 0;
@@ -118,15 +120,33 @@ h1 {
 .add-band, .add-festival {
   text-align: center;
   font-family: $smallfont;
-  button {
-    margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
+  a {
+    margin: 0;
     font-size: 16px;
     font-family: $smallfont;
     padding: 10px;
-    border: none;
     background-color: $indigo;
     color: $white;
     border-radius: 5px;
+    text-decoration: none;
+  &:hover {
+    background-color: $yellow;
+  }
+  }
+}
+.band-form, .festival-form {
+  font-family: $smallfont;
+  margin: 5px;
+}
+.band-form-button, .festival-form-button {
+  input {
+  background-color: $redSheer;
+  font-family: $smallfont;
+  border: none;
+  font-size: 16px;
+  color: $white;
+  border-radius: 5px;
   &:hover {
     background-color: $yellow;
   }
