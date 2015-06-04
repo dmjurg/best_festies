@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor'
 gem 'geocoder'
 gem 'backbone-on-rails'
 gem 'handlebars_assets'
