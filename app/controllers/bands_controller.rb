@@ -13,7 +13,7 @@ class BandsController < ApplicationController
   end
 
   def new
-
+    @band = Band.new
   end
 
   def create
@@ -23,22 +23,6 @@ class BandsController < ApplicationController
       else
         render(:new)
       end
-  end
-
-  def edit
-    @band = Band.find(params[:id])
-  end
-
-  def update
-    @band = Band.find(params[:id])
-    @band.update(band_params)
-    redirect_to(bands_path)
-  end
-
-  def destroy
-    @band = Band.find(params[:id])
-    @band.destroy
-    redirect_to bands_path
   end
 
   private
