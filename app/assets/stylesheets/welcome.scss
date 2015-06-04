@@ -81,6 +81,18 @@ h1 {
 #library {
   margin: 10px;
   text-align: center;
+  input.reset {
+    background-color: $indigo;
+    font-family: $smallfont;
+    color: $white;
+    padding: 7px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    &:hover {
+      background-color: $redSheer;
+    }
+  }
 }
 .band, .festival {
   font-family: $secondfont;
@@ -126,12 +138,12 @@ h1 {
     font-size: 16px;
     font-family: $smallfont;
     padding: 10px;
-    background-color: $indigo;
+    background-color: $yellow;
     color: $white;
     border-radius: 5px;
     text-decoration: none;
   &:hover {
-    background-color: $yellow;
+    background-color: $indigo;
   }
   }
 }

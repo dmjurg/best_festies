@@ -17,11 +17,19 @@ var FestivalListView = Backbone.View.extend({
   },
 
   events: {
-    'keypress .search': 'filterFestivals'
+    'keypress .search': 'filterFestivals',
+    'click .reset': 'reset'
   },
 
-  filterFestivals: function() {
-    console.log("filtering festivals")
+  reset: function() {
+    this.collection = new FestivalsCollection();
+    this.collection.fetch({reset: true});
+  },
+
+  filterFestivals: function(event) {
+    var letters = $(".search").val();
+    this.collection = this.collection.search(letters);
+    this.renderAll();
   }
 
 });
