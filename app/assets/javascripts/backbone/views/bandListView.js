@@ -16,22 +16,22 @@ var BandListView = Backbone.View.extend({
     this.$("#band-list").append(bandView.$el);
   },
 
-  events: {
-    'keypress .search': 'filterBands',
-
-  },
-
-  renderMatches: function(){
-    this.$("#searched-band-list").empty();
-    this.collection.each(this.renderMatch, this);
-  },
-
-  renderMatch: function(band) {
-    var bandSearchView = new BandView({
-      model: band
-    });
-    return this.$("#searched-band-list").append(bandSearchView.$el);;
-  },
+  // events: {
+  //   'keypress .search': 'filterBands',
+  //
+  // },
+  //
+  // renderMatches: function(){
+  //   this.$("#searched-band-list").empty();
+  //   this.collection.each(this.renderMatch, this);
+  // },
+  //
+  // renderMatch: function(band) {
+  //   var bandSearchView = new BandView({
+  //     model: band
+  //   });
+  //   return this.$("#searched-band-list").append(bandSearchView.$el);;
+  // },
   //   var bandMatchView = new BandView({model: band});
   //   this.$("#band-list").append(bandMatchView.$el);
   // },
@@ -48,9 +48,9 @@ var BandListView = Backbone.View.extend({
   //   return this;
   // },
 
-  filterBands: function(event) {
-    var letters = $(".search").val();
-		this.renderMatches(this.collection.search(letters));
-  }
+  // filterBands: function(event) {
+  //   var letters = $(".search").val();
+	// 	this.renderMatches(this.collection.search(letters));
+  // }
 
 });
