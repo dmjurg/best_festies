@@ -10,10 +10,11 @@ var BandsCollection = Backbone.Collection.extend({
     var pattern = new RegExp(letters, "gi");
     // Well it seems that without wrapping the filter with the underscore function, the filter does not return a collection
     return _(this.filter(function(data) {
-      return pattern.test(data.get("name"));
+      // return
+      console.log(pattern.test(data.get("name")));
     }));
   },
-  
+
   model: BandModel,
   url: '/bands'
 });
