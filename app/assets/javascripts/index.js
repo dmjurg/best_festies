@@ -3,6 +3,8 @@ $(document).ready(function(){
   var items = $('.container div');
   var itemAmt = items.length;
 
+  // items.hide();
+
   function cycleItems(){
     var item = $('.container div').eq(currentIndex);
     items.hide();

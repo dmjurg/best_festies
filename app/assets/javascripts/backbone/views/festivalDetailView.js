@@ -14,4 +14,5 @@ var FestivalDetailView = Backbone.View.extend({
     var renderedHTML = HandlebarsTemplates['festivals/inspect'](this.model.toJSON());
     this.$el.html(renderedHTML);
   }
+
 })

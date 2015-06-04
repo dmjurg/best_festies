@@ -3,7 +3,7 @@ class FestivalsController < ApplicationController
     @festivals = Festival.all
     respond_to do |format|
         format.html { render :index }
-        format.json { render status: 200, json: @festivals.to_json }
+        format.json { render status: 200, json: @festivals.to_json(include: :bands) }
     end
   end
 

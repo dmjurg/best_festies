@@ -8,10 +8,9 @@
   <p>
     {{location}}
   </p>
-
-  <p>
-    {{#each this.bands}}
-      {{ this }}
+  <ul>
+    {{#each bands}}
+      <li>{{ this.name }}</li>
     {{/each}}
-  </p>
+  </ul>
 </div>

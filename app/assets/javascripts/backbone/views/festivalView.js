@@ -18,5 +18,7 @@ var FestivalView = Backbone.View.extend({
 
   detailFestival: function() {
     festivalDetail.setFestival(this.model);
+    // console.log(this.model.get("bands"));
   }
+
 });

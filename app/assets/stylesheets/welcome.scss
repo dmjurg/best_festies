@@ -2,11 +2,11 @@ $headerfont: 'Londrina Shadow', cursive;
 $secondfont: 'Delius Unicase', cursive;
 $smallfont: 'Actor', sans-serif;
 $skyblue: rgba(226, 255, 255, 1);
-$indigo: rgba(46, 46, 184, .7);
+$indigo: rgba(46, 46, 184, .85);
 $white: rgba(255, 255, 250, 1);
 $yellow: rgba(255, 214, 51, 1);
 $red: rgba(255, 51, 0, 1);
-$redSheer: rgba(255, 51, 0, .7);
+$redSheer: rgba(255, 51, 0, .85);
 
 body {
   background-color: $skyblue;
@@ -40,9 +40,13 @@ h1 {
   margin: auto;
 }
 .container div {
-  display: inline-block;
-  // display: none;
+  // display: inline-block;
+  display: none;
+  &:first-child {
+    display: inline-block;
+  }
 }
+
 .roo {
   display: inline-block;
 }
@@ -103,6 +107,12 @@ h1 {
   font-family: $smallfont;
   p {
     margin: 0;
+  }
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+    }
   }
 }
 .add-band, .add-festival {
