@@ -20,10 +20,14 @@
     <%= f.text_field  :location %>
   </div>
 
-  <!-- <div class="festival-form">
-    <%= f.label       :bands %>
-    <%= f.text_field  :bands %>
-  </div> -->
+  <div class="festival-form">
+    <%= f.label       :bands_appearing %>
+    <%= f.select      :band_ids,
+      @bands.map  { |b| [b.name, b.id] },
+                    { include_blank: true },
+                    { multiple: true, class: "chosen-select" }
+    %>
+  </div>
 
   <div class="festival-form-button">
     <%= f.submit %>

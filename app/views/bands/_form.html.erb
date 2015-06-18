@@ -6,14 +6,13 @@
   </div>
 
   <div class="band-form">
-    <%= f.label       :image %>
-    <%= f.text_field  :image %>
+    <%= f.label       :festivals_they_are_appearing_at %>
+    <%= f.select      :festival_ids,
+      @festivals.map  { |f| [f.name, f.id] },
+                      { include_blank: true },
+                      { multiple: true, class: "chosen-select" }
+    %>
   </div>
-
-  <!-- <div class="band-form">
-    <%= f.label       :festivals %>
-    <%= f.text_field  :festivals %>
-  </div> -->
 
   <div class="band-form-button">
     <%= f.submit %>

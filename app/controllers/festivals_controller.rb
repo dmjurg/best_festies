@@ -14,6 +14,7 @@ class FestivalsController < ApplicationController
 
   def new
     @festival = Festival.new
+    @bands = Band.all
   end
 
   def create
@@ -23,12 +24,13 @@ class FestivalsController < ApplicationController
       else
         render(:new)
       end
+    @bands = Band.all
   end
 
   private
 
   def festival_params
-    params.require(:festival).permit(:name, :location, :start_date, :end_date, :bands)
+    params.require(:festival).permit(:name, :location, :start_date, :end_date, band_ids: [])
   end
 
 end

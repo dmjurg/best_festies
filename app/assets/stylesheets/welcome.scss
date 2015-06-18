@@ -20,6 +20,9 @@ h1 {
   font-family: $headerfont;
   color: $yellow;
 }
+li {
+  list-style: none;
+}
 .instructions {
   font-family: $smallfont;
   text-align: center;
@@ -64,7 +67,7 @@ h1 {
     margin: 0px;
   }
   li {
-    list-style: none;
+    // list-style: none;
     display: inline;
     padding: 10px;
   }
@@ -168,4 +171,8 @@ h1 {
   width: 1000px;
   height: 700px;
   margin: auto;
+}
+.list_fests {
+  margin: 0;
+  padding: 0;
 }

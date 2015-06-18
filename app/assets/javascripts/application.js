@@ -20,3 +20,13 @@
 //= require_tree ./backbone/models
 //= require_tree ./backbone/collections
 //= require_tree ./backbone/views
+//= require chosen-jquery
+
+$(document).ready(function() {
+  $('.chosen-select').chosen({
+    disable_search: true,
+    no_results_text: 'Oops, nothing found!',
+    width: '200px'
+  });
+
+})

@@ -5,6 +5,9 @@ gem 'rails_12factor'
 gem 'geocoder'
 gem 'backbone-on-rails'
 gem 'handlebars_assets'
+gem 'chosen-rails'
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
